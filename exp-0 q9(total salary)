@@ -1,0 +1,24 @@
+# WAP to Calculate the final salary of an employee where da is 10% of basic salary and hra is 5% of basic salary
+
+# Taking basic salary input from the user
+basic_salary = float(input("Enter the basic salary: "))
+
+# Calculating DA and HRA
+da = 0.10 * basic_salary
+hra = 0.05 * basic_salary
+
+# Calculating final salary
+final_salary = basic_salary + da + hra
+
+# Displaying the result
+print("DA (10%):", da)
+print("HRA (5%):", hra)
+print("Final Salary:", final_salary)
+
+# OUTPUT
+'''
+Enter the basic salary: 20000
+DA (10%): 2000.0
+HRA (5%): 1000.0
+Final Salary: 23000.0
+'''
