@@ -1,0 +1,21 @@
+// WAP to calculate area and perimeter of a rectangle
+
+# Taking input from the user
+length = float(input("Enter the length of the rectangle: "))
+breadth = float(input("Enter the breadth of the rectangle: "))
+
+# Calculating area and perimeter
+area = length * breadth
+perimeter = 2 * (length + breadth)
+
+# Displaying the results
+print("Area of rectangle:", area)
+print("Perimeter of rectangle:", perimeter)
+
+# OUTPUT
+'''
+Enter the length of the rectangle: 10
+Enter the breadth of the rectangle: 4
+Area of rectangle: 40.0
+Perimeter of rectangle: 28.0
+'''
