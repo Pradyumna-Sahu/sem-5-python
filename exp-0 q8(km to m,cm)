@@ -1,0 +1,19 @@
+# Program to convert kilometers to meters and centimeters
+
+# Taking input from the user
+kilometers = float(input("Enter distance in kilometers: "))
+
+# Conversion calculations
+meters = kilometers * 1000
+centimeters = kilometers * 100000
+
+# Displaying the results
+print("Distance in meters:", meters)
+print("Distance in centimeters:", centimeters)
+
+# OUTPUT
+'''
+Enter distance in kilometers: 2.5
+Distance in meters: 2500.0
+Distance in centimeters: 250000.0
+'''
