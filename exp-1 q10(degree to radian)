@@ -1,0 +1,11 @@
+# Write a Python program to convert degree to radian
+
+degree = float(input("Enter angle in degrees: "))
+radian = degree * 3.1416 / 180
+print("Angle in radians is", radian)
+
+# OUTPUT
+'''
+Enter angle in degrees: 180
+Angle in radians is 3.1416
+'''
