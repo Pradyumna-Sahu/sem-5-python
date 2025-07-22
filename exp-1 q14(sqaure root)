@@ -1,0 +1,11 @@
+# Python Program to Find the Square Root (no loops required).
+
+num = float(input("Enter a number: "))
+sqrt = num ** 0.5
+print("Square root is", sqrt)
+
+# OUTPUT
+'''
+Enter a number: 25
+Square root is 5.0
+'''
