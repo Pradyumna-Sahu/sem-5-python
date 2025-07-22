@@ -1,0 +1,11 @@
+# Write a Python program to find the sum of the first n numbers (no loops required).
+
+n = int(input("Enter a number: "))
+sum = n * (n + 1) // 2
+print("Sum of first", n, "numbers is", sum)
+
+# OUTPUT
+'''
+Enter a number: 10
+Sum of first 10 numbers is 55
+'''
