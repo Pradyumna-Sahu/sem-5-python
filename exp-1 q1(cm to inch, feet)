@@ -1,0 +1,13 @@
+# Write a program that asks the user to input his height in centimeters. Your program should convert and display the height in Feet and inches. (Hint: 1 inch equals 2.54 centimeters and 1 foot equals 12 inches).
+
+cm = float(input("Enter your height in centimeters: "))
+inches = cm / 2.54
+feet = int(inches // 12)
+inches = inches % 12
+print("Your height is", feet, "feet and", round(inches, 2), "inches.")
+
+# OUTPUT
+'''
+Enter your height in centimeters: 165
+Your height is 5 feet and 4.96 inches.
+'''
