@@ -1,0 +1,15 @@
+# Write a program which accept principle, rate and time from user and print the simple interest
+
+p = float(input("Enter principal: "))
+r = float(input("Enter rate: "))
+t = float(input("Enter time: "))
+si = (p * r * t) / 100
+print("Simple Interest is", si)
+
+# OUTPUT
+'''
+Enter principal: 1000
+Enter rate: 5
+Enter time: 2
+Simple Interest is 100.0
+'''
