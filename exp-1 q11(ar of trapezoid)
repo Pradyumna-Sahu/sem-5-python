@@ -1,0 +1,15 @@
+# Write a Python program to calculate the area of a trapezoid
+
+a = float(input("Enter the length of the first base: "))
+b = float(input("Enter the length of the second base: "))
+h = float(input("Enter the height: "))
+area = 0.5 * (a + b) * h
+print("Area of the trapezoid is", area)
+
+# OUTPUT
+'''
+Enter the length of the first base: 10
+Enter the length of the second base: 6
+Enter the height: 4
+Area of the trapezoid is 32.0
+'''
