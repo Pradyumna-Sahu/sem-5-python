@@ -1,0 +1,16 @@
+# Write a program to find Quotient and Remainder of two numbers
+
+a = int(input("Enter dividend: "))
+b = int(input("Enter divisor: "))
+quotient = a // b
+remainder = a % b
+print("Quotient is", quotient)
+print("Remainder is", remainder)
+
+# OUTPUT
+'''
+Enter dividend: 20
+Enter divisor: 3
+Quotient is 6
+Remainder is 2
+'''
