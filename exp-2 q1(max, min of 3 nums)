@@ -1,0 +1,31 @@
+# Take Input of age of 3 people and find oldest and youngest among them.
+
+a = int(input("Enter age of first person: "))
+b = int(input("Enter age of second person: "))
+c = int(input("Enter age of third person: "))
+
+if a > b and a > c:
+    oldest = a
+elif b > c:
+    oldest = b
+else:
+    oldest = c
+
+if a < b and a < c:
+    youngest = a
+elif b < c:
+    youngest = b
+else:
+    youngest = c
+
+print("Oldest age is:", oldest)
+print("Youngest age is:", youngest)
+
+# OUTPUT 
+'''
+Enter age of first person: 25
+Enter age of second person: 42
+Enter age of third person: 19
+Oldest age is: 42
+Youngest age is: 19
+'''
