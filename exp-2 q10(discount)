@@ -1,0 +1,28 @@
+# A shop will give discount of D% if the cost of purchased quantity is more than N. Ask user for discount D, quantity Q and cost per unit C, print total cost for the user.
+
+D = float(input("Enter discount percentage: "))
+Q = int(input("Enter quantity: "))
+C = float(input("Enter cost per unit: "))
+
+N = 1000  # Threshold for discount eligibility
+
+total_cost = Q * C
+
+if total_cost > N:
+    discount_amount = (D / 100) * total_cost
+    total_cost -= discount_amount
+
+print("Total cost to pay is:", total_cost)
+
+# OUTPUT 
+'''
+Enter discount percentage: 5
+Enter quantity: 20
+Enter cost per unit: 40
+Total cost to pay is: 800.0
+
+Enter discount percentage: 10
+Enter quantity: 50
+Enter cost per unit: 25
+Total cost to pay is: 1125.0
+'''
