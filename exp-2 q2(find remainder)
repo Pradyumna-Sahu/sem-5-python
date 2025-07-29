@@ -1,0 +1,34 @@
+'''
+There is a special magic stone which makes the sound "pling plang pong" if rain drops fall on it.
+If the rain drop is divisible by 3 than it sounds 'pling',
+If the rain drop is divisible by 5 than it sounds 'plang',
+If the rain drop is divisible by 7 than it sounds 'pong',
+Enter the rain drop and print the sound made by the magic stone.
+'''
+
+n = int(input("Enter the rain drop number: "))
+sound = ""
+
+if n % 3 == 0:
+    sound += "pling"
+if n % 5 == 0:
+    sound += "plang"
+if n % 7 == 0:
+    sound += "pong"
+
+if sound == "":
+    print(n)
+else:
+    print(sound)
+
+# OUTPUT 
+'''
+Enter the rain drop number: 105
+plingplangpong
+
+Enter the rain drop number: 35
+plangpong
+
+Enter the rain drop number: 8
+8
+'''
