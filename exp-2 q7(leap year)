@@ -1,0 +1,16 @@
+# A person travels 1825kms in a year and can go more 6kms in a leap year. Ask the user to enter a year and find the travelled distance for that year.
+
+year = int(input("Enter a year: "))
+
+if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+    distance = 1825 + 6
+else:
+    distance = 1825
+
+print("Total distance travelled in the year", year, "is", distance, "kms")
+
+# OUTPUT 
+'''
+Enter a year: 2024
+Total distance travelled in the year 2024 is 1831 kms
+'''
