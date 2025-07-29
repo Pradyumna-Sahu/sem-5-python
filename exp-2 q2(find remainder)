@@ -1,8 +1,8 @@
 '''
 There is a special magic stone which makes the sound "pling plang pong" if rain drops fall on it.
-If the rain drop is divisible by 3 than it sounds 'pling',
-If the rain drop is divisible by 5 than it sounds 'plang',
-If the rain drop is divisible by 7 than it sounds 'pong',
+> If the rain drop is divisible by 3 than it sounds 'pling',
+> If the rain drop is divisible by 5 than it sounds 'plang',
+> If the rain drop is divisible by 7 than it sounds 'pong',
 Enter the rain drop and print the sound made by the magic stone.
 '''
 
