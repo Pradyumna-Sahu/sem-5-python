@@ -1,0 +1,23 @@
+# Write a program that prompts the user to input a character and determine the character is vowel or consonant
+
+char = input("Enter a single character: ").lower()
+
+if 'a' <= char <= 'z' and len(char) == 1:
+    if char in "aeiou":
+        print("'" + char + "' is a vowel.")
+    else:
+        print("'" + char + "' is a consonant.")
+else:
+    print("Invalid input. Please enter a single letter.")
+
+# OUTPUT 
+'''
+Enter a single character: E
+'e' is a vowel.
+
+Enter a single character: g
+'g' is a consonant.
+
+Enter a single character: 9
+Invalid input. Please enter a single letter.
+'''
