@@ -1,0 +1,39 @@
+# Whether the trangle will be be an obtuse angle, or a right-angle or an acute angle triangle
+
+a = float(input("Enter first side: "))
+b = float(input("Enter second side: "))
+c = float(input("Enter third side: "))
+
+# Sort sides to make c the largest
+if a > b:
+    a, b = b, a
+if b > c:
+    b, c = c, b
+if a > b:
+    a, b = b, a
+
+# Apply Pythagoras Theorem Logic
+if c**2 == a**2 + b**2:
+    print("Right-angled triangle")
+elif c**2 < a**2 + b**2:
+    print("Acute-angled triangle")
+else:
+    print("Obtuse-angled triangle")
+
+# OUTPUT 
+'''
+Enter first side: 3
+Enter second side: 4
+Enter third side: 5
+Right-angled triangle
+
+Enter first side: 5
+Enter second side: 5
+Enter third side: 5
+Acute-angled triangle
+
+Enter first side: 7
+Enter second side: 10
+Enter third side: 5
+Obtuse-angled triangle
+'''
