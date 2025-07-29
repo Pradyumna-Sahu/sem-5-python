@@ -1,0 +1,32 @@
+'''
+Write a program that prompts the user to input a number. Program should display sponding days to the number. 
+For example if user type 1 the output should be Sunday. If user type 7 the output should be Saturday.
+'''
+
+n = int(input("Enter a number (1-7): "))
+
+if n == 1:
+    print("Sunday")
+elif n == 2:
+    print("Monday")
+elif n == 3:
+    print("Tuesday")
+elif n == 4:
+    print("Wednesday")
+elif n == 5:
+    print("Thursday")
+elif n == 6:
+    print("Friday")
+elif n == 7:
+    print("Saturday")
+else:
+    print("Invalid input")
+
+# OUTPUT 
+'''
+Enter a number (1-7): 1
+Sunday
+
+Enter a number (1-7): 9
+Invalid input
+'''
