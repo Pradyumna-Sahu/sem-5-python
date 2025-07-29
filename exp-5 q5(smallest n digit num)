@@ -1,0 +1,18 @@
+# A Person want to know the smallest N digit number, provided the number of digits. Write a program to check whether entered number is smallest N digit number or not
+
+n = int(input("Enter number of digits: "))
+num = int(input("Enter a number: "))
+
+smallest = 10 ** (n - 1)
+
+if num == smallest:
+    print("It is the smallest", n, "digit number")
+else:
+    print("It is NOT the smallest", n, "digit number")
+
+# OUTPUT 
+'''
+Enter number of digits: 3
+Enter a number: 100
+It is the smallest 3 digit number
+'''
