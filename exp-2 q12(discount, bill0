@@ -1,0 +1,26 @@
+'''
+Write a program which asks user to enter price and quantity of a product. Your program should calculate and display the bill amount as price quantity.
+If bill amount is more than 2000 discount of 20% on bill amount should be subtracted from bill
+'''
+
+price = float(input("Enter price of the product: "))
+quantity = int(input("Enter quantity: "))
+
+bill_amount = price * quantity
+
+if bill_amount > 2000:
+    discount = bill_amount * 0.20
+    bill_amount -= discount
+
+print("Total bill amount is: ₹", bill_amount)
+
+# OUTPUT 
+'''
+Enter price of the product: 500
+Enter quantity: 3
+Total bill amount is: ₹ 1500.0
+
+Enter price of the product: 700
+Enter quantity: 4
+Total bill amount is: ₹ 2240.0
+'''
