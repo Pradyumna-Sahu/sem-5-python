@@ -1,8 +1,8 @@
 '''
 You will be given a number which represent your character's altitude above sea level
-Positive numbers represent height above the water.
-O is sea level.
-Negative numbers represent depth below the water's surface.
+> Positive numbers represent height above the water.
+> O is sea level.
+> Negative numbers represent depth below the water's surface.
 Write a program to print your current level and can you breath or not.
 '''
 
