@@ -1,0 +1,20 @@
+# Write a program to enter two numbers, display "Hi" if first number entered by user is a multiple of second number, otherwise print "Bye"
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+if a % b == 0:
+    print("Hi")
+else:
+    print("Bye")
+
+# OUTPUT 
+'''
+Enter first number: 12
+Enter second number: 4
+Hi
+
+Enter first number: 15
+Enter second number: 7
+Bye
+'''
