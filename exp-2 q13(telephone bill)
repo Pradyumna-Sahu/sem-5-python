@@ -1,0 +1,33 @@
+'''
+Write a program that prompts the user to input number of calls and calculate the monthiy telephone bills as per the following rule:
+> Minimum ₹200 for up to 100 calls.
+> Plus ₹0.60 per call for next 50 calls.
+> Plus ₹0.50 per call for next 50 calls.
+> Plus ₹0.40 per call for any call beyond 200 calls.
+'''
+
+calls = int(input("Enter number of calls made: "))
+
+bill = 200
+
+if calls > 100:
+    if calls <= 150:
+        bill += (calls - 100) * 0.60
+    elif calls <= 200:
+        bill += 50 * 0.60 + (calls - 150) * 0.50
+    else:
+        bill += 50 * 0.60 + 50 * 0.50 + (calls - 200) * 0.40
+
+print("Total telephone bill is: ₹", bill)
+
+# OUTPUT 
+'''
+Enter number of calls made: 120
+Total telephone bill is: ₹ 212.0
+
+Enter number of calls made: 180
+Total telephone bill is: ₹ 235.0
+
+Enter number of calls made: 220
+Total telephone bill is: ₹ 247.0
+'''
