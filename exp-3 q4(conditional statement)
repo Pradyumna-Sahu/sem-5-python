@@ -1,0 +1,26 @@
+'''
+You will be given a number which represent your character's altitude above sea level
+Positive numbers represent height above the water.
+O is sea level.
+Negative numbers represent depth below the water's surface.
+Write a program to print your current level and can you breath or not.
+'''
+
+n = int(input("Enter your current altitude: "))
+
+if n > 0:
+    print("You are above sea level")
+    print("You can breathe")
+elif n == 0:
+    print("You are at sea level")
+    print("You can breathe")
+else:
+    print("You are below sea level")
+    print("You cannot breathe")
+
+# OUTPUT 
+'''
+Enter your current altitude: 0
+You are at sea level
+You can breathe
+'''
