@@ -1,0 +1,69 @@
+'''
+A cloth showroom has announced the following discounts on the purchase of specific items : 
+Amount Range (₹)	Shorts Discount	Pants Discount	Shirts/T-Shirts Discount
+0 - 100	-	3%	5%
+101 - 200	5%	8%	10%
+201 - 300	10%	12%	15%
+Above 300	18%	20%	22%
+1) Ask user to enter the amount the amount and assign assign following code for the items such as sh for shorts, p for pants and sht for shits/t-shirts.
+2) Compute the Discount and net amount paid by customer
+'''
+
+amount = float(input("Enter the amount: "))
+item_code = input("Enter item code (sh for Shorts / p for Pants / sht for Shirts/T-Shirts): ")
+
+discount = 0
+
+if item_code == "sh":
+    if 101 <= amount <= 200:
+        discount = 5
+    elif 201 <= amount <= 300:
+        discount = 10
+    elif amount > 300:
+        discount = 18
+
+elif item_code == "p":
+    if 0 <= amount <= 100:
+        discount = 3
+    elif 101 <= amount <= 200:
+        discount = 8
+    elif 201 <= amount <= 300:
+        discount = 12
+    elif amount > 300:
+        discount = 20
+
+elif item_code == "sht":
+    if 0 <= amount <= 100:
+        discount = 5
+    elif 101 <= amount <= 200:
+        discount = 10
+    elif 201 <= amount <= 300:
+        discount = 15
+    elif amount > 300:
+        discount = 22
+
+else:
+    print("Invalid item code")
+    exit()
+
+discount_amount = (discount / 100) * amount
+net_amount = amount - discount_amount
+
+print("Discount Applied:", discount, "%")
+print("Discount Amount: ₹", discount_amount)
+print("Net Amount to Pay: ₹", net_amount)
+
+# OUTPUT 
+'''
+Enter the amount: 250
+Enter item code (sh for Shorts / p for Pants / sht for Shirts/T-Shirts): p
+Discount Applied: 12 %
+Discount Amount: ₹ 30.0
+Net Amount to Pay: ₹ 220.0
+
+Enter the amount: 90
+Enter item code (sh for Shorts / p for Pants / sht for Shirts/T-Shirts): sht
+Discount Applied: 5 %
+Discount Amount: ₹ 4.5
+Net Amount to Pay: ₹ 85.5
+'''
