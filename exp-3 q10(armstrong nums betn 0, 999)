@@ -1,0 +1,29 @@
+# An Armstrong number of three digits is an integer such that the sum of the cubes of
+# is digits is equal to the number itself. Write a program to find all Armstrong
+# number in the range of 0 and 999.9
+
+print("Armstrong numbers between 0 and 999 are:")
+
+for num in range(0, 1000):
+    # Extract digits
+    digit1 = num // 100           # Hundreds digit
+    digit2 = (num // 10) % 10     # Tens digit
+    digit3 = num % 10             # Units digit
+
+    # Compute sum of cubes of digits
+    sum_of_cubes = digit1**3 + digit2**3 + digit3**3
+
+    # Check if number is Armstrong
+    if num == sum_of_cubes:
+        print(num)
+
+# OUTPUT 
+'''
+Armstrong numbers between 0 and 999 are:
+0
+1
+153
+370
+371
+407
+'''
