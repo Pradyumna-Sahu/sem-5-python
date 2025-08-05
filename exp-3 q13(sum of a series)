@@ -1,0 +1,24 @@
+# Compute the sum up to n terms in the series 1 - 1/2 + 1/3 - 1/4 + 1/5 - ... 1/n where n is a positive integer and input by user.
+
+# Input: Number of terms N
+n = int(input("Enter the number of terms (n): "))
+
+# Initialize sum
+series_sum = 0.0
+
+# Compute the series sum
+for i in range(1, n + 1):
+    term = 1 / i
+    if i % 2 == 0:
+        series_sum -= term  # Subtract for even i
+    else:
+        series_sum += term  # Add for odd i
+
+# Display the result
+print("Sum of the series up to", n, "terms is:", series_sum)
+
+# OUTPUT 
+'''
+Enter the number of terms (n): 5
+Sum of the series up to 5 terms is: 0.7833333333333332
+'''
