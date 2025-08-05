@@ -1,0 +1,275 @@
+'''
+Write programs to print following patterns using for loop as well as while loop (more programs in appendix)  : 
+1.
+**********
+**********
+**********
+**********
+
+2.
+*
+**
+***
+****
+*****
+
+3.
+    *
+   **
+  ***
+ ****
+*****
+
+4.
+   *
+  ***
+ *****
+*******
+
+5.
+    1
+   222
+  33333
+ 4444444
+555555555
+
+6.
+    1
+   212
+  32123
+ 4321234
+543212345
+'''
+
+Alright! Below are the **Python programs** to print each of the 6 patterns you mentioned using both **for loops** and **while loops**.
+
+---
+
+## **Pattern 1**
+
+```
+**********
+**********
+**********
+**********
+```
+
+### **For Loop**
+
+```python
+for i in range(4):
+    print("*" * 10)
+```
+
+### **While Loop**
+
+```python
+i = 0
+while i < 4:
+    print("*" * 10)
+    i += 1
+```
+
+---
+
+## **Pattern 2**
+
+```
+*
+**
+***
+****
+*****
+```
+
+### **For Loop**
+
+```python
+for i in range(1, 6):
+    print("*" * i)
+```
+
+### **While Loop**
+
+```python
+i = 1
+while i <= 5:
+    print("*" * i)
+    i += 1
+```
+
+---
+
+## **Pattern 3**
+
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+### **For Loop**
+
+```python
+for i in range(1, 6):
+    print(" " * (5 - i) + "*" * i)
+```
+
+### **While Loop**
+
+```python
+i = 1
+while i <= 5:
+    print(" " * (5 - i) + "*" * i)
+    i += 1
+```
+
+---
+
+## **Pattern 4**
+
+```
+   *
+  ***
+ *****
+*******
+```
+
+### **For Loop**
+
+```python
+n = 4
+for i in range(1, n + 1):
+    spaces = " " * (n - i)
+    stars = "*" * (2 * i - 1)
+    print(spaces + stars)
+```
+
+### **While Loop**
+
+```python
+n = 4
+i = 1
+while i <= n:
+    spaces = " " * (n - i)
+    stars = "*" * (2 * i - 1)
+    print(spaces + stars)
+    i += 1
+```
+
+---
+
+## **Pattern 5**
+
+```
+    1
+   222
+  33333
+ 4444444
+555555555
+```
+
+### **For Loop**
+
+```python
+n = 5
+
+for i in range(1, n + 1):
+    # Print spaces
+    for j in range(n - i):
+        print(" ", end="")
+
+    # Print digits (2*i - 1 times)
+    for j in range(2 * i - 1):
+        print(i, end="")
+
+    print()  # New line after each row
+```
+
+### **While Loop**
+
+```python
+n = 5
+i = 1
+
+while i <= n:
+    # Print spaces
+    spaces = n - i
+    j = 1
+    while j <= spaces:
+        print(" ", end="")
+        j += 1
+
+    # Print digits (2*i - 1 times)
+    j = 1
+    while j <= (2 * i - 1):
+        print(i, end="")
+        j += 1
+
+    print()  # New line after each row
+    i += 1
+```
+
+---
+
+## **Pattern 6**
+
+```
+    1
+   212
+  32123
+ 4321234
+543212345
+```
+
+### **For Loop**
+
+```python
+n = 5
+for i in range(1, n + 1):
+    print(" " * (n - i), end="")
+
+    # Descending numbers
+    for j in range(i, 0, -1):
+        print(j, end="")
+
+    # Ascending numbers
+    for j in range(2, i + 1):
+        print(j, end="")
+
+    print()  # New line after each row
+```
+
+### **While Loop**
+
+```python
+n = 5
+i = 1
+
+while i <= n:
+    # Print spaces
+    spaces = n - i
+    j = 1
+    while j <= spaces:
+        print(" ", end="")
+        j += 1
+
+    # Print descending numbers
+    j = i
+    while j >= 1:
+        print(j, end="")
+        j -= 1
+
+    # Print ascending numbers
+    j = 2
+    while j <= i:
+        print(j, end="")
+        j += 1
+
+    print()  # New line
+    i += 1
+```
+
+---
