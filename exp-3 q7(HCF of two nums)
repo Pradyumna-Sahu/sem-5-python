@@ -1,0 +1,27 @@
+# Write a program that prompts the user to input two numbers and display its HCF The Highest Common Factor (HCF) 
+# also called the Greatest Common Divisor (GCD)oftwo whole numbers is the largest whole number that's a factor of both of them.
+
+# Prompt user to enter two numbers
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+
+# Store original numbers for display
+a = num1
+b = num2
+
+# Euclidean Algorithm (Subtraction Method)
+while num1 != num2:
+    if num1 > num2:
+        num1 -= num2
+    else:
+        num2 -= num1
+
+# Print the HCF
+print("HCF of", a, "and", b, "is", num1)
+
+# OUTPUT 
+'''
+Enter first number: 36
+Enter second number: 60
+HCF of 36 and 60 is 12
+'''
