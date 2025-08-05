@@ -1,0 +1,26 @@
+# Write a program that prompts the user to input a decimal integer and display its binary equivalent.
+
+# Prompt user to enter a decimal number
+n = int(input("Enter a decimal number: "))
+res = ''  # Binary result
+
+original_n = n  # Store original number for display
+
+# Handle case when user enters 0
+if n == 0:
+    res = '0'
+else:
+    while n > 0:
+        res = str(n % 2) + res
+        n //= 2
+
+print("Binary equivalent of", original_n, "is:", res)
+
+# OUTPUT 
+'''
+Enter a decimal number: 7
+Binary equivalent of 7 is: 111
+
+Enter a decimal number: 0
+Binary equivalent of 0 is: 0
+'''
