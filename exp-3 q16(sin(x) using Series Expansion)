@@ -1,0 +1,36 @@
+# Write a program to compute sin(x) for given x. The user should supply x and a positive integer n. 
+# We compute the sine of x using the series and the computation should use all terms in the series up to the term involving xⁿ
+# sin(x) = x - x3/x! + x5/5! - x7/7! + x9/9! ....
+
+# Function to calculate factorial
+def factorial(num):
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    return fact
+
+# Input x and n
+x = float(input("Enter the value of x (in radians): "))
+n = int(input("Enter the highest power of x (n, odd positive integer): "))
+
+# Initialize sum of series
+sin_x = 0.0
+
+# Sign variable to alternate + and -
+sign = 1
+
+# Loop over odd powers from 1 to n
+for i in range(1, n + 1, 2):
+    term = (x ** i) / factorial(i)
+    sin_x += sign * term
+    sign *= -1  # Alternate sign
+
+# Display the result
+print("sin(", x, ") using series up to x^", n, "is:", sin_x)
+
+# OUTPUT 
+'''
+Enter the value of x (in radians): 1.5708
+Enter the highest power of x (n, odd positive integer): 9
+sin( 1.5708 ) using series up to x^ 9 is: 1.0000000006627803
+'''
