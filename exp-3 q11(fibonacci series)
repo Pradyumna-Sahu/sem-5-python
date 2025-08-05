@@ -1,0 +1,46 @@
+# Write a program to obtain the first 25 numbers of a Fibonacci sequence. In a Fibonacci sequence the sum of two successive terms gives the third term
+
+# First two terms of Fibonacci sequence
+a = 0
+b = 1
+
+print("First 25 numbers of Fibonacci sequence:")
+print(a)
+print(b)
+
+# Generate next 23 terms (since first two are already printed)
+for _ in range(23):
+    c = a + b
+    print(c)
+    a = b
+    b = c
+
+# OUTPUT 
+'''
+First 25 numbers of Fibonacci sequence:
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
+610
+987
+1597
+2584
+4181
+6765
+10946
+17711
+28657
+46368
+'''
