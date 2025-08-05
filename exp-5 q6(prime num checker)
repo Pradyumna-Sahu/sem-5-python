@@ -1,0 +1,32 @@
+# Write a program that prompts the user to input a positive integer, It should then output a message indicating whether the number is a prime number.
+
+# Prompt user to enter a positive integer
+num = int(input("Enter a positive integer: "))
+
+# Check if number is less than 2 (since 0 and 1 are not prime)
+if num < 2:
+    print(num, "is not a prime number.")
+else:
+    # Assume number is prime until a divisor is found
+    is_prime = True
+
+    # Check divisibility from 2 to num-1
+    for i in range(2, num):
+        if num % i == 0:
+            is_prime = False
+            break
+
+    # Output result
+    if is_prime:
+        print(num, "is a prime number.")
+    else:
+        print(num, "is not a prime number.")
+
+# OUTPUT 
+'''
+Enter a positive integer: 7
+7 is a prime number.
+
+Enter a positive integer: 10
+10 is not a prime number.
+'''
