@@ -1,0 +1,20 @@
+# Write a program that prompts the user to input a binary number and display its decimal equlvalent
+
+# Ask user to enter a binary number
+binary_str = input("Enter a binary number: ")
+
+# Initialize decimal value to 0
+decimal_num = 0
+
+# Go through each digit in binary number (from left to right)
+for digit in binary_str:
+    decimal_num = decimal_num * 2 + int(digit)
+
+# Display the decimal equivalent
+print("Decimal equivalent is:", decimal_num)
+
+# OUTPUT 
+'''
+Enter a binary number: 1010
+Decimal equivalent is: 10
+'''
