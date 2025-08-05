@@ -1,0 +1,34 @@
+# Write a program to enter the numbers till the user wants and at the end the program should display the largest and smallest numbers entered.
+
+# Read the first number
+num = int(input("Enter a number (-999 to stop): "))
+
+# Initialize largest and smallest with the first number
+largest = num
+smallest = num
+
+while True:
+    num = int(input("Enter a number (-999 to stop): "))
+    
+    if num == -999:
+        break
+
+    if num > largest:
+        largest = num
+    if num < smallest:
+        smallest = num
+
+# Display the largest and smallest numbers
+print("Largest number entered is:", largest)
+print("Smallest number entered is:", smallest)
+
+# OUTPUT 
+'''
+Enter a number (-999 to stop): 15
+Enter a number (-999 to stop): 7
+Enter a number (-999 to stop): 28
+Enter a number (-999 to stop): 3
+Enter a number (-999 to stop): -999
+Largest number entered is: 28
+Smallest number entered is: 3
+'''
