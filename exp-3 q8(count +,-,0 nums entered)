@@ -1,0 +1,33 @@
+# Write a program to enter the number still the user wants and at the end it should display the count of positive, negative and zeros entered.
+
+positive_count = 0
+negative_count = 0
+zero_count = 0
+
+while True:
+    num = int(input("Enter a number (-999 to stop): "))
+
+    if num == -999:
+        break
+
+    if num > 0:
+        positive_count += 1
+    elif num < 0:
+        negative_count += 1
+    else:
+        zero_count += 1
+
+print("Positive numbers entered:", positive_count)
+print("Negative numbers entered:", negative_count)
+print("Zeros entered:", zero_count)
+
+# OUTPUT 
+'''
+Enter a number (-999 to stop): 5
+Enter a number (-999 to stop): 0
+Enter a number (-999 to stop): -7
+Enter a number (-999 to stop): -999
+Positive numbers entered: 1
+Negative numbers entered: 1
+Zeros entered: 1
+'''
