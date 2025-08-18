@@ -1,0 +1,15 @@
+'''
+Write a recursive function to find_ factorial(). Run the program using the driver function main().
+''' 
+
+def find_factorial(n):
+    return 1 if n<=1 else n*find_factorial(n-1)
+
+n = int(input("Enter number: "))
+print("Factorial =", find_factorial(n))
+
+# OUTPUT 
+'''
+Enter number: 5
+Factorial = 120
+'''
