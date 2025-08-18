@@ -1,0 +1,17 @@
+'''
+Write a program that reads two integers from keyboard and calculate the greatest common divisor (gcd) using recursive function.
+''' 
+
+def gcd(a, b):
+    return a if b==0 else gcd(b, a%b)
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("GCD =", gcd(a, b))
+
+# OUTPUT 
+'''
+Enter first number: 48
+Enter second number: 18
+GCD = 6
+'''
