@@ -1,0 +1,25 @@
+'''
+Write a recursive function that accepts two numbers as its argument and returns its power. 
+Make the second parameter as optional. If second parameter not given then return square of the number.
+''' 
+
+def power(a, b=2):
+    if b == 0: return 1
+    return a * power(a, b-1)
+
+a = int(input("Enter base: "))
+b = input("Enter exponent (press enter for square): ")
+b = int(b) if b else 2
+print("Result =", power(a, b))
+
+# OUTPUT 
+'''
+Enter base: 2
+Enter exponent (press enter for square): 5
+Result = 32
+
+# If exponent is left blank:
+Enter base: 7
+Enter exponent (press enter for square):
+Result = 49
+'''
