@@ -1,0 +1,21 @@
+'''
+ Write a function in python to display the elements of list thrice if it is a number and display the element terminated with '#' if it is not a number.
+For example, if the content of list is as follows:
+C'41', DROND’, GIRIRAJ', 13';ZARA]
+The output should be 414141 DROND# GIRIRAJ# 131313 ZARA#
+''' 
+
+def display_list(lst):
+    for item in lst:
+        if item.isdigit():
+            print(item*3, end=" ")
+        else:
+            print(item+"#", end=" ")
+
+lst = ['41', 'DROND', 'GIRIRAJ', '13', 'ZARA']
+display_list(lst)
+
+# OUTPUT 
+'''
+414141 DROND# GIRIRAJ# 131313 ZARA#
+'''
