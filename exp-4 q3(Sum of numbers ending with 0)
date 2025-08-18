@@ -1,0 +1,24 @@
+'''
+Write a program to display the sum of the numbers which end with a zero. 
+The function zero_ending(scores) should only accept the numbers ending with zero if not show appropriate error message. 
+The driver function main() accepts the values from the user and shows the result.
+For example:
+Input:[200, 456, 300, 100, 234, 678]
+Output: 600
+''' 
+
+def zero_ending(scores):
+    valid = [n for n in scores if n % 10 == 0]
+    if not valid:
+        print("Error: No numbers ending with zero found")
+        return 0
+    return sum(valid)
+
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+print("Sum =", zero_ending(nums))
+
+# OUTPUT 
+'''
+Enter numbers separated by space: 200 456 300 100 234 678
+Sum = 600
+'''
