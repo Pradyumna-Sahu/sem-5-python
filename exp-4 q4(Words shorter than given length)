@@ -1,0 +1,19 @@
+'''
+Write a function count_now(words) to find and display the words with length less
+than a user given value.
+''' 
+
+def count_now(words, limit):
+    result = [w for w in words if len(w) < limit]
+    print("Words shorter than", limit, ":", result)
+
+words = input("Enter words separated by space: ").split()
+n = int(input("Enter max length: "))
+count_now(words, n)
+
+# OUTPUT 
+'''
+Enter words separated by space: apple bat cat elephant dog
+Enter max length: 4
+Words shorter than 4 : ['bat', 'cat', 'dog']
+'''
