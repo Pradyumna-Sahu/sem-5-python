@@ -1,0 +1,15 @@
+'''
+Write a recursive function that accepts a number as its argument and returns the sum of digits.
+''' 
+
+def sum_digits(n):
+    return 0 if n==0 else n%10 + sum_digits(n//10)
+
+n = int(input("Enter number: "))
+print("Sum of digits =", sum_digits(n))
+
+# OUTPUT 
+'''
+Enter number: 1234
+Sum of digits = 10
+'''
