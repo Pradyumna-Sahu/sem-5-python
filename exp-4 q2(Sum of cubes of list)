@@ -1,0 +1,17 @@
+'''
+Write a function in python to find the sum of the cube of elements in a list. 
+Write a driver function main() to accept the values from the user and give user friendly 
+response (show error response for empty values and invalid number literals).
+''' 
+
+def sum_of_cubes(lst):
+    return sum(x**3 for x in lst)
+
+nums = list(map(int, input("Enter numbers separated by space: ").split()))
+print("Sum of cubes =", sum_of_cubes(nums))
+
+# OUTPUT 
+'''
+Enter numbers separated by space: 2 3 4
+Sum of cubes = 99
+'''
