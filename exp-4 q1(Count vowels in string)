@@ -1,0 +1,17 @@
+'''
+Write a user friendly Python Program that contains a function, is_vowel, which checks if a given character is a vowel. 
+Create a driver function main() that accepts a string from the user and count number of vowels in that string.
+'''
+
+def is_vowel(ch):
+    return ch.lower() in 'aeiou'
+
+s = input("Enter a string: ")
+count = sum(1 for c in s if is_vowel(c))
+print("Number of vowels:", count)
+
+# OUTPUT 
+'''
+Enter a string: Hello World
+Number of vowels: 3
+'''
