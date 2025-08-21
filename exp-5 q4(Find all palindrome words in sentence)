@@ -1,0 +1,12 @@
+'''
+Write a python program to find all palindrome words from a given sentence.
+''' 
+
+s = "dad went to see radar and madam"
+palindromes = [w for w in s.split() if w == w[::-1]]
+print("Palindromes:", palindromes)
+
+# OUTPUT 
+'''
+Palindromes: ['dad', 'radar', 'madam']
+'''
