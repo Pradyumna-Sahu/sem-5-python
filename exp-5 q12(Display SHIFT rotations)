@@ -1,0 +1,22 @@
+'''
+Write a program that display following output:
+SHIFT
+HIFTS
+IFTSH
+FISHI
+TSHEF
+''' 
+
+s = "SHIFT"
+for i in range(len(s)):
+    rotated = s[i:] + s[:i]
+    print(rotated)
+
+# OUTPUT 
+'''
+SHIFT
+HIFTS
+IFTSH
+FTSHI
+TSHIF
+'''
