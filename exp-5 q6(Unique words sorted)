@@ -1,0 +1,13 @@
+'''
+Write a Python program that accepts a comma separated sequence of words as input and 
+prints the unique words in sorted form (alphanumerically).
+''' 
+
+s = "apple,banana,apple,orange,banana"
+words = sorted(set(s.split(",")))
+print("Unique sorted:", words)
+
+# OUTPUT 
+'''
+Unique sorted: ['apple', 'banana', 'orange']
+'''
