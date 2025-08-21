@@ -1,0 +1,13 @@
+'''
+Write a python program to make Uppercase Half of a given String
+''' 
+
+s = "computer"
+mid = len(s)//2
+res = s[:mid] + s[mid:].upper()
+print("Result:", res)
+
+# OUTPUT 
+'''
+Result: comPUTER
+'''
