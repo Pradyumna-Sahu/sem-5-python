@@ -1,0 +1,13 @@
+'''
+Write a Python program to print a string made of 4 copies of the last twe characters 
+of a specified string (length must be at least 2)
+''' 
+
+s = "python"
+new = s[-2:] * 4
+print("Result:", new)
+
+# OUTPUT 
+'''
+Result: onononon
+'''
