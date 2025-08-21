@@ -1,0 +1,15 @@
+'''
+Write a python program to remove all characters from a string except integers
+''' 
+
+s = "abc123xyz45"
+digits = ""
+for ch in s:
+    if ch.isdigit():
+        digits += ch
+print("Digits only:", digits)
+
+# OUTPUT 
+'''
+Digits only: 12345
+'''
