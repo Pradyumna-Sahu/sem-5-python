@@ -1,0 +1,43 @@
+'''
+Write a Python Program to print the String Hells, World! Without actually using rew strings. 
+This includes quotes, double quotes and template strings. You cannot use the following:
+"Hello, World"
+Hello, World
+Hello, Wand
+''' 
+
+msg = "Hello, World!"
+print(msg)                # "Hello, World!"
+print("'Hello, World!'")  # single quotes
+print("`Hello, World!'")  # backtick
+
+# OUTPUT 
+'''
+Hello, World!
+'Hello, World!'
+`Hello, World!'
+'''
+'
+
+message = (
+    chr(72) +  # H
+    chr(101) + # e
+    chr(108) + # l
+    chr(108) + # l
+    chr(115) + # s
+    chr(44) +  # ,
+    chr(32) +  # (space)
+    chr(87) +  # W
+    chr(111) + # o
+    chr(114) + # r
+    chr(108) + # l
+    chr(100) + # d
+    chr(33)    # !
+)
+
+print(message)
+
+# OUTPUT
+'''
+Hells, World!
+'''
