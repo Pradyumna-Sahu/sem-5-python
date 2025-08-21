@@ -1,0 +1,12 @@
+'''
+Write a Python program to create the HTML string with tags around the word(s).
+''' 
+
+s = "python"
+html = f"<html><body>{s}</body></html>"
+print(html)
+
+# OUTPUT 
+'''
+<html><body>python</body></html>
+'''
