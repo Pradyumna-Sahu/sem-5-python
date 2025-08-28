@@ -1,0 +1,15 @@
+'''
+Write a python program to input a word and check if any palindrome word can be created from the letters of the given word having same length.
+''' 
+
+from collections import Counter
+word = "civic"
+c = Counter(word)
+odd = sum(v%2 for v in c.values())
+print("Palindrome possible" if odd<=1 else "Not possible")
+
+# OUTPUT 
+'''
+Input: civic
+Output: Palindrome possible
+'''
