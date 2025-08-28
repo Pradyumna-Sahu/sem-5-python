@@ -1,0 +1,18 @@
+'''
+Given a two Python list. 
+Write a program to iterate both lists simultaneously and display items from list1 in original order and items from list2 in reverse order
+''' 
+
+a = [1,2,3]
+b = [4,5,6]
+for x,y in zip(a, reversed(b)):
+    print(x,y)
+
+# OUTPUT 
+'''
+Input: [1,2,3], [4,5,6]
+Output:
+1 6
+2 5
+3 4
+'''
