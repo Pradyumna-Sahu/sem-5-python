@@ -1,0 +1,16 @@
+'''
+Python program to find all prime numbers up to N and store it in a list. Find the sum of the listed primes.
+''' 
+
+N = 20
+primes = []
+for n in range(2,N+1):
+    if all(n%i!=0 for i in range(2,int(n**0.5)+1)):
+        primes.append(n)
+print("Primes:",primes,"Sum:",sum(primes))
+
+# OUTPUT 
+'''
+Input: N = 20
+Output: Primes: [2, 3, 5, 7, 11, 13, 17, 19] Sum: 77
+'''
