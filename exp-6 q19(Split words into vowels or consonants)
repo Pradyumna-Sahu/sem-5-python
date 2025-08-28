@@ -1,0 +1,18 @@
+'''
+Input a sentence and separate the words in to two lists based on the majority of vowel and consonant letters in the word. 
+If the word contains more vowels then consonants store in the vowels list otherwise in the consonant list.
+''' 
+
+s = "apple sky orange tree"
+vowel_list, cons_list = [], []
+for w in s.split():
+    v = sum(ch in "aeiou" for ch in w.lower())
+    c = len(w)-v
+    (vowel_list if v>c else cons_list).append(w)
+print("Vowels:",vowel_list,"Consonants:",cons_list)
+
+# OUTPUT 
+'''
+Input: "apple sky orange tree"
+Output: Vowels: ['apple', 'orange'] Consonants: ['sky', 'tree']
+'''
