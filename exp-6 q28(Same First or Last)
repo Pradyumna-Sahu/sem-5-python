@@ -1,0 +1,14 @@
+'''
+Given 2 lists of integers, list_a and list_b, print Same if they have the same first element or they have the same last element. 
+Both lists should be length 1 or more.
+''' 
+
+a = [1,2,3]
+b = [1,4,3]
+print("Same" if a[0]==b[0] or a[-1]==b[-1] else "Not Same")
+
+# OUTPUT 
+'''
+Input: [1,2,3], [1,4,3]
+Output: Same
+'''
