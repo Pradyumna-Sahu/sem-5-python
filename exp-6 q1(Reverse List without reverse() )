@@ -1,0 +1,14 @@
+'''
+Write a program that accepts a list from user. Your program should reverse the content of list and display it. 
+Do not use reverse() method.
+''' 
+
+lst = [10, 20, 30, 40]
+rev = lst[::-1]
+print("Reversed List:", rev)
+
+# OUTPUT 
+'''
+Input: [10, 20, 30, 40]
+Output: Reversed List: [40, 30, 20, 10]
+'''
