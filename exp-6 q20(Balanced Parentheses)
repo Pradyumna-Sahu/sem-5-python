@@ -1,0 +1,20 @@
+'''
+Check if a given string contains balanced Parentheses.
+''' 
+
+s = "((a+b)*c)"
+stack=[]
+balanced=True
+for ch in s:
+    if ch=="(":
+        stack.append(ch)
+    elif ch==")":
+        if not stack: balanced=False; break
+        stack.pop()
+print("Balanced" if balanced and not stack else "Not Balanced")
+
+# OUTPUT 
+'''
+Input: ((a+b)*c)
+Output: Balanced
+'''
