@@ -1,0 +1,16 @@
+'''
+Write a program that reads a string from the user containing a date in the form mm/dd/yyyy. 
+It should print the date in the form March 12, 2021.
+''' 
+
+months = ["January","February","March","April","May","June",
+          "July","August","September","October","November","December"]
+date = "03/12/2021"
+m,d,y = date.split("/")
+print(months[int(m)-1], d+",", y)
+
+# OUTPUT 
+'''
+Input: 03/12/2021
+Output: March 12, 2021
+'''
