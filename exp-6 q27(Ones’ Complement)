@@ -1,0 +1,14 @@
+'''
+The Ones Complement of a binary number is the number obtained by swapping all the Os for 1s and all the 1s for Os. 
+For any given binary number, formatted as a string, return the Ones Complement of that number.
+''' 
+
+b = "10101"
+comp = "".join("1" if ch=="0" else "0" for ch in b)
+print("Ones Complement:",comp)
+
+# OUTPUT 
+'''
+Input: 10101
+Output: 01010
+'''
