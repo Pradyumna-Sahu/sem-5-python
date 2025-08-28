@@ -1,0 +1,17 @@
+'''
+Find and display the largest number of a list without using built-in function max(). 
+Your program should ask the user to input values in list from keyboard.
+''' 
+
+lst = [4, 7, 1, 9, 3]
+largest = lst[0]
+for i in lst:
+    if i > largest:
+        largest = i
+print("Largest:", largest)
+
+# OUTPUT 
+'''
+Input: [4, 7, 1, 9, 3]
+Output: Largest: 9
+'''
