@@ -1,0 +1,18 @@
+'''
+Write a program that accepts a list from user. 
+Your program should multiply the odd elements by 3 and divide the even elements by 2 and display the list.
+''' 
+
+lst = [2, 3, 4, 5]
+for i in range(len(lst)):
+    if lst[i] % 2 == 0:
+        lst[i] = lst[i] // 2
+    else:
+        lst[i] = lst[i] * 3
+print("Modified List:", lst)
+
+# OUTPUT 
+'''
+Input: [2, 3, 4, 5]
+Output: Modified List: [1, 9, 2, 15]
+'''
