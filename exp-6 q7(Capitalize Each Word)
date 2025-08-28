@@ -1,0 +1,14 @@
+'''
+Write a program with a function that accepts a string from keyboard and create a new string after converting character of each word capitalized. 
+For instance, if the sentence is "stop and smell the roses." the output should be "Stop And Smell The Roses"
+''' 
+
+s = "stop and smell the roses"
+result = " ".join(word.capitalize() for word in s.split())
+print(result)
+
+# OUTPUT 
+'''
+Input: stop and smell the roses
+Output: Stop And Smell The Roses
+'''
