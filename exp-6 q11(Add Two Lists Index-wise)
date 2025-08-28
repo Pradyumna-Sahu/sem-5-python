@@ -1,0 +1,16 @@
+'''
+Write a program to add two lists index-wise. 
+Create a new list that contains the Oth Index item from both the list, then the 1st index item, and so on till the last element. 
+Any leftover items will get added at the end of the new list.
+''' 
+
+a = [1,2,3]
+b = [4,5,6,7]
+c = [a[i]+b[i] for i in range(min(len(a),len(b)))] + a[len(b):] + b[len(a):]
+print("New List:", c)
+
+# OUTPUT 
+'''
+Input: [1,2,3], [4,5,6,7]
+Output: [5, 7, 9, 7]
+'''
