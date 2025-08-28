@@ -1,0 +1,14 @@
+'''
+Given a list of integers length 3, figure out which is larger, the first or last element in the list, and set all the other elements to be that value. print the changed list.
+''' 
+
+lst = [2,5,3]
+big = max(lst[0],lst[-1])
+lst = [big]*len(lst)
+print(lst)
+
+# OUTPUT 
+'''
+Input: [2,5,3]
+Output: [3, 3, 3]
+'''
