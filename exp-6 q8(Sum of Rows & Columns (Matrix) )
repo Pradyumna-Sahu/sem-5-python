@@ -1,0 +1,21 @@
+'''
+Find the sum of each row and column of matrix of size m x n.
+''' 
+
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+for row in matrix:
+    print("Row sum:", sum(row))
+for col in zip(*matrix):
+    print("Col sum:", sum(col))
+
+# OUTPUT 
+'''
+Input: [[1,2,3],[4,5,6],[7,8,9]]
+Output:
+Row sum: 6
+Row sum: 15
+Row sum: 24
+Col sum: 12
+Col sum: 15
+Col sum: 18
+'''
