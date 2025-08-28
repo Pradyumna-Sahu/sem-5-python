@@ -1,0 +1,14 @@
+'''
+Write a program that input a string and ask user to delete a given word from a string.
+''' 
+
+s = "I like apple"
+word = "apple"
+new_s = s.replace(word, "")
+print("After deletion:", new_s.strip())
+
+# OUTPUT 
+'''
+Input: "I like apple", word = "apple"
+Output: After deletion: I like
+'''
