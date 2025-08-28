@@ -1,0 +1,14 @@
+'''
+Implement stack using list.
+''' 
+
+stack=[]
+stack.append(10)
+stack.append(20)
+print("Pop:",stack.pop())
+
+# OUTPUT 
+'''
+Input: push 10, push 20, pop
+Output: Pop: 20
+'''
