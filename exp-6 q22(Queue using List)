@@ -1,0 +1,14 @@
+'''
+Implement queue using list.
+''' 
+
+queue=[]
+queue.append(10)
+queue.append(20)
+print("Dequeue:",queue.pop(0))
+
+# OUTPUT 
+'''
+Input: enqueue 10, enqueue 20, dequeue
+Output: Dequeue: 10
+'''
