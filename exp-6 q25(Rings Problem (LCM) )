@@ -1,0 +1,18 @@
+'''
+Imagine two rings with numbers on them. 
+The inner ring spins clockwise (decreasing by 1 each spin) and the outer ring spins counter clockwise (increasing by 1 each spin). 
+We start with both rings aligned on 0 at the top, and on each move we spin each ring one increment. 
+How many moves will it take before both rings show the same number at the top again? 
+The inner ring has integers from 0 to innerMax and the outer ring has integers from 0 to outerMax, where innerMax and outerMax are integers >= 1.
+''' 
+
+import math
+innerMax, outerMax = 4, 6
+moves = math.lcm(innerMax+1, outerMax+1)
+print("Moves:", moves)
+
+# OUTPUT 
+'''
+Input: innerMax=4, outerMax=6
+Output: Moves: 35
+'''
