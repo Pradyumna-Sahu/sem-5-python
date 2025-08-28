@@ -1,0 +1,13 @@
+'''
+Python program to find the Cumulative Sum of a list.
+''' 
+
+lst = [1,2,3,4]
+c = [sum(lst[:i+1]) for i in range(len(lst))]
+print("Cumulative:", c)
+
+# OUTPUT 
+'''
+Input: [1,2,3,4]
+Output: [1, 3, 6, 10]
+'''
