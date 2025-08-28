@@ -1,0 +1,15 @@
+'''
+Python Program to Print Sum of Negative Numbers, Positive Even & Odd Numbers in a List.
+''' 
+
+lst = [-1,2,3,4,-5,7]
+neg = sum(x for x in lst if x<0)
+even = sum(x for x in lst if x>0 and x%2==0)
+odd = sum(x for x in lst if x>0 and x%2!=0)
+print("Neg:",neg,"Even:",even,"Odd:",odd)
+
+# OUTPUT 
+'''
+Input: [-1,2,3,4,-5,7]
+Output: Neg: -6 Even: 6 Odd: 10
+'''
