@@ -1,0 +1,17 @@
+'''
+Write a program that reads a string from keyboard and prints the unique words. 
+Your program should convert input string to lower case.
+''' 
+
+s = input("Enter string: ").lower()
+words = s.split()
+unique = set(words)
+print(unique)
+
+# OUTPUT 
+'''
+Input: Hello world hello python
+Output: {'python', 'hello', 'world'}
+'''
+
+print(set(input("String: ").lower().split()))
