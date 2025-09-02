@@ -1,0 +1,55 @@
+'''
+Given a list of words. Each word contains string of digits. 
+Confirm whether the sum of all the individual even digits is greater than the sum of all the individual odd digits. 
+Create a dictionary with three keys ['even_is_greater_than_odd', 'odd_is_greater_than_even', 'even_and_odd_are_the_same'] having a list as the value.
+Store the words in the corresponding list in the dictionary.
+''' 
+
+words = ["1234", "246", "135", "111"]
+
+d = {
+    'even_is_greater_than_odd': [],
+    'odd_is_greater_than_even': [],
+    'even_and_odd_are_the_same': []
+}
+
+for w in words:
+    even_sum = 0
+    odd_sum = 0
+    for ch in w:
+        dgt = int(ch)
+        if dgt % 2 == 0:
+            even_sum += dgt
+        else:
+            odd_sum += dgt
+    
+    if even_sum > odd_sum:
+        d['even_is_greater_than_odd'].append(w)
+    elif odd_sum > even_sum:
+        d['odd_is_greater_than_even'].append(w)
+    else:
+        d['even_and_odd_are_the_same'].append(w)
+
+print(d)
+
+# OUTPUT 
+'''
+Input: ["1234","246","135","111"]
+Output:
+{
+ 'even_is_greater_than_odd': ['1234','246'],
+ 'odd_is_greater_than_even': ['135','111'],
+ 'even_and_odd_are_the_same': []
+}
+'''
+
+
+words=["1234","246","135","111"]
+d={'even_is_greater_than_odd':[],'odd_is_greater_than_even':[],'even_and_odd_are_the_same':[]}
+for w in words:
+    e=sum(int(c) for c in w if int(c)%2==0)
+    o=sum(int(c) for c in w if int(c)%2==1)
+    if e>o:d['even_is_greater_than_odd'].append(w)
+    elif o>e:d['odd_is_greater_than_even'].append(w)
+    else:d['even_and_odd_are_the_same'].append(w)
+print(d)
