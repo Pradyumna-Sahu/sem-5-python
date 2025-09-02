@@ -1,0 +1,24 @@
+'''
+Write a program that accepts a string and change its lowercase vowels to special character 
+as given:  a -> @, e -> #, i -> !, o -> %, u -> ^
+''' 
+
+s = input("Enter string: ").lower()
+replace = {'a':'@','e':'#','i':'!','o':'%','u':'^'}
+result = ""
+for c in s:
+    if c in replace:
+        result += replace[c]
+    else:
+        result += c
+print(result)
+
+# OUTPUT 
+'''
+Input: education
+Output: #d^c@t!%
+'''
+
+s=input("String: ").lower()
+m={'a':'@','e':'#','i':'!','o':'%','u':'^'}
+print("".join(m.get(c,c) for c in s))
