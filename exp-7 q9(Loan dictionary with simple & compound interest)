@@ -1,0 +1,60 @@
+'''
+Given a principal p, interest rate r, and a number of periods n, 
+Create a dictionary which contains {"loan borrower": "name", "loan lender": "name", 
+"total owed under simple interest": value, "total owed under compound interest": value, and 
+all other input values} as the key. Round all answers to the nearest integer. 
+Principal will always be an integer between 0 and 9999. Interest rate will be a decimal between 0 and 1. 
+Number of time periods will be an integer between 0 and 50.
+''' 
+
+p = int(input("Principal: "))
+r = float(input("Rate (0-1): "))
+n = int(input("Periods: "))
+borrower = input("Borrower: ")
+lender = input("Lender: ")
+
+simple = round(p * (1 + r * n))
+compound = round(p * ((1 + r) ** n))
+
+loan = {
+    "loan borrower": borrower,
+    "loan lender": lender,
+    "principal": p,
+    "rate": r,
+    "periods": n,
+    "total owed under simple interest": simple,
+    "total owed under compound interest": compound
+}
+
+print(loan)
+
+# OUTPUT 
+'''
+P: 1000
+R: 0.1
+N: 2
+Borrower: Ram
+Lender: Bank
+{'loan borrower': 'Ram', 'loan lender': 'Bank', 'principal': 1000, 'rate': 0.1,
+ 'periods': 2, 'total owed under simple interest': 1200,
+ 'total owed under compound interest': 1210}
+'''
+
+
+p = int(input("Principal: "))
+r = float(input("Rate: "))
+n = int(input("Periods: "))
+si = round((p*r*n)/100)
+ci = round(p*((1+r/100)**n -1))
+d = {"loan_borrower":"A","loan_lender":"B",
+     "total_owed_simple":si,"total_owed_compound":ci}
+print(d)
+
+
+
+p=int(input("P: "));r=float(input("R: "));n=int(input("N: "))
+loan={"loan borrower":input("Borrower: "),"loan lender":input("Lender: "),
+"principal":p,"rate":r,"periods":n,
+"total owed under simple interest":round(p*(1+r*n)),
+"total owed under compound interest":round(p*((1+r)**n))}
+print(loan)
