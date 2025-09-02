@@ -1,0 +1,47 @@
+'''
+Write a program that keeps of the students name and his marks in a dictionary as key-value pairs. 
+The program should store records of 10 students and display the students name and marks of five students in decreasing order of marks obtained.
+''' 
+
+d = {}
+for i in range(10):
+    name = input("Enter name: ")
+    marks = int(input("Enter marks: "))
+    d[name] = marks
+
+# Convert to list of (name, marks)
+items = list(d.items())
+
+# Manual sort (descending by marks)
+for i in range(len(items)):
+    for j in range(i+1, len(items)):
+        if items[i][1] < items[j][1]:
+            items[i], items[j] = items[j], items[i]
+
+print("Top 5 students:")
+for i in range(5):
+    print(items[i][0], items[i][1])
+
+# OUTPUT 
+'''
+Input (names+marks for 10 students):
+Ram 50, Sita 80, Hari 70, Gita 95, Radha 65, Mohan 40, Rani 60, Ajay 55, Vijay 75, Neha 85
+Output:
+Top 5:
+Gita 95
+Neha 85
+Sita 80
+Vijay 75
+Hari 70
+'''
+
+
+d={}
+for i in range(10):
+    d[input("Name: ")] = int(input("Marks: "))
+items=list(d.items())
+for i in range(len(items)):
+    for j in range(i+1,len(items)):
+        if items[i][1]<items[j][1]:
+            items[i],items[j]=items[j],items[i]
+print("Top 5:",items[:5])
