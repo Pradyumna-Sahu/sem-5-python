@@ -1,0 +1,66 @@
+'''
+Write a program that keeps name and birthday in a dictionary as key-value pairs. 
+The program should display a menu that lets the user search a persons birthday, 
+add a new name and birthday change an existing birthday, and delete an existing name and birthday.
+''' 
+
+d = {}
+
+while True:
+    print("\n1.Search  2.Add  3.Change  4.Delete  5.Exit")
+    ch = input("Choice: ")
+
+    if ch == '1':
+        name = input("Name: ")
+        print("Birthday:", d.get(name, "Not found"))
+
+    elif ch == '2':
+        name = input("Name: ")
+        bday = input("Birthday: ")
+        d[name] = bday
+
+    elif ch == '3':
+        name = input("Name: ")
+        if name in d:
+            d[name] = input("New Birthday: ")
+        else:
+            print("Name not found")
+
+    elif ch == '4':
+        name = input("Name: ")
+        if name in d:
+            del d[name]
+        else:
+            print("Name not found")
+
+    elif ch == '5':
+        break
+
+# OUTPUT 
+'''
+1.Search 2.Add 3.Change 4.Delete 5.Exit: 2
+Name: Ram
+Birthday: 10-01-2000
+
+1.Search 2.Add 3.Change 4.Delete 5.Exit: 1
+Name: Ram
+Birthday: 10-01-2000
+
+1.Search 2.Add 3.Change 4.Delete 5.Exit: 3
+Name: Ram
+New Birthday: 15-01-2000
+
+1.Search 2.Add 3.Change 4.Delete 5.Exit: 1
+Name: Ram
+Birthday: 15-01-2000
+'''
+
+
+d={}
+while True:
+    ch=input("1.Search 2.Add 3.Change 4.Delete 5.Exit: ")
+    if ch=='1': print(d.get(input("Name: "),"Not found"))
+    elif ch=='2': d[input("Name: ")]=input("Birthday: ")
+    elif ch=='3': d[input("Name: ")]=input("New Birthday: ")
+    elif ch=='4': d.pop(input("Name: "),None)
+    else: break
