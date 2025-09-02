@@ -1,0 +1,25 @@
+'''
+Write a user friendly Python program to store information and display it on the screen in a table format of list of students. 
+Ask the user to provide name (string), roll (integer) and marks (float).
+''' 
+
+d = {}
+n = int(input("No. of students: "))
+for _ in range(n):
+    name = input("Name: ")
+    roll = int(input("Roll: "))
+    marks = float(input("Marks: "))
+    d[name] = [roll, marks]
+print(d)
+
+# OUTPUT 
+'''
+No. of students: 2
+Name: Ram
+Roll: 1
+Marks: 88.5
+Name: Sita
+Roll: 2
+Marks: 90
+{'Ram': [1, 88.5], 'Sita': [2, 90.0]}
+'''
