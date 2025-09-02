@@ -1,0 +1,26 @@
+'''
+Write a user friendly Python program to remove the lowercase vowels (a, e, i, o, u) in a given word (dont worry about uppercase vowels). 
+Store the modified word in a dictionary using the original word as the key.
+''' 
+
+word = input("Enter word: ")
+vowels = "aeiou"
+new_word = ""
+
+for ch in word:
+    if ch not in vowels:
+        new_word += ch
+
+d = {word: new_word}
+print(d)
+
+# OUTPUT 
+'''
+Word: computer
+{'computer': 'cmptr'}
+'''
+
+
+w=input("Word: ")
+d={w:"".join([c for c in w if c not in "aeiou"])}
+print(d)
