@@ -1,0 +1,42 @@
+'''
+Write a program that reads a string from keyboard and prints the letters in decreasing order of frequency. 
+Your program should convert all the input to lowercase and only count the letters a-z. 
+Your program should not count spaces, digits, punctuation or anything other than the letters a-z.
+''' 
+
+s = input("Enter string: ").lower()
+d = {}
+for c in s:
+    if 'a' <= c <= 'z':
+        if c in d:
+            d[c] += 1
+        else:
+            d[c] = 1
+
+# Convert dictionary to list of (letter, count) pairs
+items = list(d.items())
+
+# Manual bubble sort by frequency (descending)
+for i in range(len(items)):
+    for j in range(i+1, len(items)):
+        if items[i][1] < items[j][1]:
+            items[i], items[j] = items[j], items[i]
+
+print(items)
+
+# OUTPUT 
+'''
+Input: Banana
+Output: [('a', 3), ('n', 2), ('b', 1)]
+'''
+
+s=input("String: ").lower()
+d={}
+for c in s:
+    if 'a'<=c<='z': d[c]=d.get(c,0)+1
+items=list(d.items())
+for i in range(len(items)):
+    for j in range(i+1,len(items)):
+        if items[i][1]<items[j][1]:
+            items[i],items[j]=items[j],items[i]
+print(items)
