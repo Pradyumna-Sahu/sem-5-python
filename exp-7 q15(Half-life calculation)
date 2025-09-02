@@ -1,0 +1,44 @@
+'''
+iven a list of radioactive substance with their initial quantity and the quantity remaining after a given period of time.
+For Example {'Cesium': {'initial': 10, ' remaining ':5, 'time_period': 1, 'half_life':1}}
+Write a user friendly Python program to find the half life of the substances. Half lifetime/log2(initial / remaining)
+''' 
+
+import math
+i=float(input("Initial: "))
+r=float(input("Remain: "))
+t=float(input("Time: "))
+print("Half life:",t/math.log2(i/r))
+
+# OUTPUT 
+'''
+Initial: 10
+Remain: 5
+Time: 6
+Output: Half life: 6.0
+'''
+
+
+import math
+
+data = {
+    'Cesium': {'initial': 10, 'remaining': 5, 'time_period': 1}
+}
+
+for sub, info in data.items():
+    i = info['initial']
+    r = info['remaining']
+    t = info['time_period']
+    if r > 0:
+        hl = t / math.log(i / r, 2)
+        info['half_life'] = round(hl, 2)
+    else:
+        info['half_life'] = None
+
+print(data)
+
+# OUTPUT 
+'''
+Input: {'Cesium': {'initial': 10,'remaining': 5,'time_period': 1}}
+Output: {'Cesium': {'initial': 10, 'remaining': 5, 'time_period': 1, 'half_life': 1.0}}
+'''
