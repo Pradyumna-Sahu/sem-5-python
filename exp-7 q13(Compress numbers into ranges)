@@ -1,0 +1,48 @@
+'''
+Write a user friendly Python Program to take arrays of numbers and compress them into ranges. 
+The numbers in the array are mostly consecutive. If you convert them as ranges, it will save a lot of space. 
+A range, or series of consecutive numbers, will be represented as two numbers separated by an underscore, 
+a range of one just by the number its self and multiple ranges separated by commas. 
+Create a dictionary to store the list of numbers converted to range using compressed form as the key.
+For example,
+The numbers 3,4,5,6,9 in compressed form would be "3_6,9"
+The dictionary is {"3_6": [3,4,5,6], "9": [9]}
+''' 
+
+arr = [3, 4, 5, 6, 9]
+arr.sort()
+res = []
+d = {}
+
+i = 0
+while i < len(arr):
+    start = arr[i]
+    while i + 1 < len(arr) and arr[i+1] == arr[i] + 1:
+        i += 1
+    end = arr[i]
+    if start == end:
+        res.append(str(start))
+        d[str(start)] = [start]
+    else:
+        res.append(str(start) + "_" + str(end))
+        d[str(start) + "_" + str(end)] = list(range(start, end+1))
+    i += 1
+
+print("Compressed:", ",".join(res))
+print("Dictionary:", d)
+
+# OUTPUT 
+'''
+Input: [3,4,5,6,9]  
+Compressed: 3_6,9  
+Dictionary: {'3_6': [3, 4, 5, 6], '9': [9]}
+'''
+
+
+a=[3,4,5,6,9];a.sort();i=0;res=[];d={}
+while i<len(a):
+    s=a[i]
+    while i+1<len(a) and a[i+1]==a[i]+1:i+=1
+    e=a[i];k=str(s) if s==e else f"{s}_{e}"
+    res.append(k);d[k]=list(range(s,e+1));i+=1
+print(",".join(res));print(d)
