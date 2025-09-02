@@ -17,3 +17,8 @@ print(d)
 Input: fear leads to anger anger leads to conflict
 Output: {'fear': 1, 'leads': 2, 'to': 2, 'anger': 2, 'conflict': 1}
 '''
+
+s = input("Sentence: ").split()
+d = {}
+for w in s: d[w] = d.get(w, 0) + 1
+print(d)
