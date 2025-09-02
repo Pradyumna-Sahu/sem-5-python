@@ -1,0 +1,47 @@
+'''
+Write a program that keeps name and phone numbers in a dictionary as key-value pairs. 
+The program should display a menu that lets the user search of a person phone, 
+add a new name and phone number change an existing phone number, and delete an existing name and phone number.
+''' 
+
+d = {}
+while True:
+    print("\n1.Search 2.Add 3.Change 4.Delete 5.Exit")
+    ch = input("Choice: ")
+    if ch == '1':
+        name = input("Name: ")
+        print(d.get(name, "Not found"))
+    elif ch == '2':
+        name = input("Name: ")
+        phone = input("Phone: ")
+        d[name] = phone
+    elif ch == '3':
+        name = input("Name: ")
+        if name in d:
+            d[name] = input("New Phone: ")
+        else:
+            print("Name not found")
+    elif ch == '4':
+        name = input("Name: ")
+        d.pop(name, None)
+    elif ch == '5':
+        break
+
+# OUTPUT 
+'''
+1.Search 2.Add 3.Change 4.Del 5.Exit: 2
+Name: Ram
+Phone: 12345
+1.Search 2.Add 3.Change 4.Del 5.Exit: 1
+Name: Ram
+12345
+'''
+
+d={}
+while True:
+    ch=input("1.Search 2.Add 3.Change 4.Del 5.Exit: ")
+    if ch=='1': print(d.get(input("Name: "),"NA"))
+    elif ch=='2': d[input("Name: ")]=input("Phone: ")
+    elif ch=='3': d[input("Name: ")]=input("New Phone: ")
+    elif ch=='4': d.pop(input("Name: "),None)
+    else: break
