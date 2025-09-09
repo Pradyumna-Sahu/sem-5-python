@@ -12,8 +12,12 @@ count_words("story.txt")
 
 # OUTPUT 
 '''
+File: story.txt
+
 This is a test file with five words
-# ^|^ File contents
+
+
+Output
 
 Total words: 8
 '''
