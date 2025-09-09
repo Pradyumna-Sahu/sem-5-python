@@ -1,0 +1,36 @@
+'''
+A text file named "matter.txt" contains some text, which needs to be displayed
+such that every next character is separated by symbol "#". Write a function
+hash_display() in Python that would display the entire content of the filematter.txt
+in the desired format.
+''' 
+
+def hash_display(filename):
+    with open(filename, "r") as f:
+        text = f.read()
+    print("#".join(text))
+
+hash_display("matter.txt")
+
+# OUTPUT 
+'''
+File: matter.txt
+
+ABCD
+
+
+Output
+
+A#B#C#D
+'''
+
+
+def hash_display(filename):
+    with open(filename, "r") as f:
+        text = f.read()
+    result = ""
+    for ch in text:
+        result += ch + "#"
+    print(result[:-1])   # remove last extra #
+
+hash_display("matter.txt")
