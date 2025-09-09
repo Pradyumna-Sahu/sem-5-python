@@ -1,0 +1,25 @@
+'''
+Write a function in Python to count the words "this" and "these" present 
+in a text file "article.txt".
+''' 
+
+def count_this_these(filename):
+    with open(filename, "r") as f:
+        words = f.read().lower().split()
+    print("this:", words.count("this"))
+    print("these:", words.count("these"))
+
+count_this_these("article.txt")
+
+# OUTPUT 
+'''
+File: article.txt
+
+This is important. These are my notes. this is repeated.
+
+
+Output
+
+this: 2
+these: 1
+'''
