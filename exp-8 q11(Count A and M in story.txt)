@@ -1,0 +1,26 @@
+'''
+Write a function AMCount() in Python, which should read each character of a text
+file STORY.TXT, should count and display the occurrence of alphabets A and M(case
+insensitive).
+''' 
+
+def AMCount(filename):
+    with open(filename, "r") as f:
+        text = f.read().upper()
+    print("A:", text.count("A"))
+    print("M:", text.count("M"))
+
+AMCount("STORY.TXT")
+
+# OUTPUT 
+'''
+File: STORY.TXT
+
+Amazing Animals Make Memories.
+
+
+Output
+
+A: 5
+M: 4
+'''
