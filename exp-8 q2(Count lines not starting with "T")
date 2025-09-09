@@ -1,0 +1,46 @@
+'''
+Write a function in python to count the number of lines from a text file "story.txt" which is not starting with an alphabet "T".
+''' 
+
+defline_count():
+  file=open("story.txt","r")
+  count=0
+  for line in file:
+    if line[0] not in 'T':
+      count+=1
+  file.close()
+print("No of lines not starting with 'T' = ", count)
+
+if_name__ == "_main_":
+  line_count()
+
+# OUTPUT 
+'''
+A boy is playing there. There is a playground.
+An aero plane is in the sky.
+The sky is pink.
+//^|^ FIle contemts
+
+No of lines not starting with 'T' = 2
+'''
+
+
+def count_lines():
+    count = 0
+    with open("story.txt", "r") as f:
+        for line in f:
+            if not line.strip().startswith("T"):   # check first letter
+                count += 1
+    print("Lines not starting with T:", count)
+
+count_lines()
+
+
+def count_lines():
+    c = 0
+    for line in open("story.txt"):
+        if not line.strip().startswith("T"):
+            c += 1
+    print("Lines not starting with T:", c)
+
+count_lines()
