@@ -1,0 +1,36 @@
+'''
+Write a function in python to read the content from a text file "poem.txt" line by line and display the same on screen.
+''' 
+
+def read_file():
+  file=open("poem.txt","r")
+  for line in file:
+    print(line, end="")file.close()
+    
+if_name__=='_main_':
+read_file()
+
+# OUTPUT 
+'''
+Twinkle twinkle little star
+How I wonder what you are
+//^|^ File contents
+
+Twinkle twinkle little star
+How I wonder what you are
+'''
+
+
+def read_poem():
+    with open("poem.txt", "r") as f:
+        for line in f:
+            print(line.strip())   # strip removes extra newline
+
+read_poem()
+
+
+def read_poem():
+    for line in open("poem.txt"):
+        print(line.strip())
+
+read_poem()
