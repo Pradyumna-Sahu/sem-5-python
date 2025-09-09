@@ -1,0 +1,19 @@
+'''
+Write a function in Python to count and display the total number of words in a text file.
+''' 
+
+def count_words(filename):
+    with open(filename, "r") as f:
+        text = f.read()
+    words = text.split()
+    print("Total words:", len(words))
+
+count_words("story.txt")
+
+# OUTPUT 
+'''
+This is a test file with five words
+# ^|^ File contents
+
+Total words: 8
+'''
