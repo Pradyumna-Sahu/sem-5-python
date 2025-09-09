@@ -1,0 +1,23 @@
+'''
+Write a function in Python to read lines from a text file "notes.txt". 
+Your function should find and display the occurrence of the word "the".
+''' 
+
+def count_the(filename):
+    with open(filename, "r") as f:
+        text = f.read().lower()
+    print("Occurrences of 'the':", text.split().count("the"))
+
+count_the("notes.txt")
+
+# OUTPUT 
+'''
+File: notes.txt
+
+The sun rises in the east. The boy is reading.
+
+
+Output
+
+Occurrences of 'the': 3
+'''
