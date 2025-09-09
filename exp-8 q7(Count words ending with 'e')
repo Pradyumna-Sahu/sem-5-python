@@ -1,0 +1,48 @@
+'''
+Write a function in Python to count words in a text file those are ending with
+alphabet "e".
+''' 
+
+def count_words_e(filename):
+    with open(filename, "r") as f:
+        words = f.read().split()
+    count = sum(1 for w in words if w.endswith("e"))
+    print("Words ending with 'e':", count)
+
+count_words_e("story.txt")
+
+# OUTPUT 
+'''
+File: story.txt
+
+Some people like apple pie and cheese.
+
+
+Output
+
+Words ending with 'e': 4
+'''
+
+
+def count_words_e(filename):
+    with open(filename, "r") as f:
+        words = f.read().split()
+    count = 0
+    for w in words:
+        if w.endswith("e"):
+            count += 1
+    print("Words ending with 'e':", count)
+
+count_words_e("story.txt")
+
+
+def count_words_e(filename):
+    with open(filename, "r") as f:
+        words = f.read().split()
+    count = 0
+    for w in words:
+        if len(w) > 0 and w[-1] == "e":   # check last character
+            count += 1
+    print("Words ending with 'e':", count)
+
+count_words_e("story.txt")
