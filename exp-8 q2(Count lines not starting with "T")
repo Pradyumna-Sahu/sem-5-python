@@ -16,10 +16,13 @@ if_name__ == "_main_":
 
 # OUTPUT 
 '''
+File : story.txt
+
 A boy is playing there. There is a playground.
 An aero plane is in the sky.
 The sky is pink.
-//^|^ FIle contemts
+
+Output:
 
 No of lines not starting with 'T' = 2
 '''
