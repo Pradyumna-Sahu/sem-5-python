@@ -1,0 +1,41 @@
+'''
+Aditi has used a text editing software to type some text. After saving the
+article as WORDS.TXT, she realized that she has wrongly typed alphabet
+J in place of alphabet I everywhere in the article. Write a function JTOI()
+in Python that would display the corrected version of entire content of the
+file WORDS.TXT with all the alphabets "]" to be displayed as an alphabet
+"I" onscreen.
+''' 
+
+def JTOI(filename):
+    with open(filename, "r") as f:
+        text = f.read()
+    print(text.replace("J", "I"))
+
+JTOI("WORDS.TXT")
+
+# OUTPUT 
+'''
+File: WORDS.TXT
+
+JUMPING JACKS ARE JOYFUL
+
+
+Output
+
+IUMPING IACKS ARE IOYFUL
+'''
+
+
+def JTOI(filename):
+    with open(filename, "r") as f:
+        text = f.read()
+    result = ""
+    for ch in text:
+        if ch == "J":
+            result += "I"
+        else:
+            result += ch
+    print(result)
+
+JTOI("WORDS.TXT")
