@@ -1,0 +1,28 @@
+'''
+Implement a class named Plant that has a constructor which initializes two instance
+variables: name and size. Also, in this class, implement a method named show that
+prints out the values of these instance variables. Create several instances of your
+class and "show" them.
+''' 
+
+class Plant:
+    def __init__(self, name, size):
+        self.name = name
+        self.size = size
+
+    def show(self):
+        print(f"Plant Name: {self.name}, Size: {self.size}")
+
+# create objects
+p1 = Plant("Rose", "Small")
+p2 = Plant("Mango", "Large")
+
+# show them
+p1.show()
+p2.show()
+
+# OUTPUT 
+'''
+Plant Name: Rose, Size: Small
+Plant Name: Mango, Size: Large
+'''
