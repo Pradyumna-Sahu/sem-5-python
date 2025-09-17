@@ -1,0 +1,77 @@
+'''
+Implement a class name Node that has two instance variables: data and children,
+where data is any, arbitrary object and children is a list of child Nodes. Also
+implement a method named show that recursively displays the nodes in a "tree".
+Create an instance of your class that contains several child instances of your class.
+Call the show method on the root(top most)object to show the tree.
+''' 
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.children = []
+
+    def add_child(self, child):
+        self.children.append(child)
+
+    def show(self, level=0):
+        print("  " * level + str(self.data))
+        for child in self.children:
+            child.show(level + 1)
+
+# build tree
+root = Node("Root")
+child1 = Node("Child1")
+child2 = Node("Child2")
+subchild = Node("SubChild1")
+
+child1.add_child(subchild)
+root.add_child(child1)
+root.add_child(child2)
+
+# show tree
+root.show()
+
+# OUTPUT 
+'''
+Root
+  Child1
+    SubChild1
+  Child2
+'''
+
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.children = []
+
+    def add(self, child):
+        self.children.append(child)
+
+    def show(self):
+        print(self.data)
+        for child in self.children:
+            child.show()
+
+# create nodes
+root = Node("Root")
+c1 = Node("Child1")
+c2 = Node("Child2")
+c1_1 = Node("SubChild1")
+
+# build tree
+c1.add(c1_1)
+root.add(c1)
+root.add(c2)
+
+# display tree
+root.show()
+
+# OUTPUT
+'''
+Root
+Child1
+SubChild1
+Child2
+'''
