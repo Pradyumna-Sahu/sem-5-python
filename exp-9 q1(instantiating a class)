@@ -1,0 +1,32 @@
+'''
+Python program to demonstrate instantiating a class.
+An object is created which is basically a dog named Rodger. 
+This class only has two class attributes that tell us that Rodger is a dog and a mammal.
+''' 
+
+classDog:
+  # A simple class# attribute
+  attr1 = "mammal"
+  attr2= "dog"
+  
+  #A sample method
+  def fun(self):
+    print("I'm a", self.attr1)
+    print("I'ma",self.attr2)
+
+#Drivercode
+if_name ==" main"
+  # Object instantiation
+  Rodger =Dog()
+
+  #Accessingclassattributes
+  # and method through objects
+  print(Rodger.attr1)
+  Rodger.fun()
+
+# OUTPUT 
+'''
+mammal
+I'm a mammal
+I'ma dog
+'''
