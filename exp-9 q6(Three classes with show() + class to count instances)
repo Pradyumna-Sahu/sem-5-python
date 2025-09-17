@@ -1,0 +1,40 @@
+'''
+Write three classes, each of which implement a show() method that takes one
+argument, a string. The show method should print out the name of the class and
+the message. Then create a list of instances and call the show() method on each
+object in the list. Implement a class that keeps a running total of the number of
+instances created.
+''' 
+
+class Counter:
+    count = 0
+    def __init__(self):
+        Counter.count += 1
+
+class A(Counter):
+    def show(self, msg):
+        print(f"A: {msg}")
+
+class B(Counter):
+    def show(self, msg):
+        print(f"B: {msg}")
+
+class C(Counter):
+    def show(self, msg):
+        print(f"C: {msg}")
+
+# create objects
+objects = [A(), B(), C(), A()]
+for obj in objects:
+    obj.show("Hello")
+
+print("Total instances created:", Counter.count)
+
+# OUTPUT 
+'''
+A: Hello
+B: Hello
+C: Hello
+A: Hello
+Total instances created: 4
+'''
