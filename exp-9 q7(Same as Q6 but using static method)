@@ -1,0 +1,46 @@
+'''
+Implement another solution to the same problem (a class that keeps a running
+total of the number of instances), but this time use a static method instead of a
+class method
+''' 
+
+class Counter:
+    count = 0
+
+    @staticmethod
+    def add():
+        Counter.count += 1
+
+class A:
+    def __init__(self):
+        Counter.add()
+    def show(self, msg):
+        print(f"A: {msg}")
+
+class B:
+    def __init__(self):
+        Counter.add()
+    def show(self, msg):
+        print(f"B: {msg}")
+
+class C:
+    def __init__(self):
+        Counter.add()
+    def show(self, msg):
+        print(f"C: {msg}")
+
+# create objects
+objects = [A(), B(), C(), B()]
+for obj in objects:
+    obj.show("Hi")
+
+print("Total instances created:", Counter.count)
+
+# OUTPUT 
+'''
+A: Hi
+B: Hi
+C: Hi
+B: Hi
+Total instances created: 4
+'''
